@@ -3,16 +3,15 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.wx</groupId>
   <artifactId>webexp</artifactId>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>webexp Maven Webapp</name>
-  <url>http://maven.apache.org</url>
+  <name>webexp</name>
 
 
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.1.RELEASE</version>
+    <version>1.5.2.RELEASE</version>
   </parent>
   <properties>
     <start-class>com.webexp.AppStater</start-class>
@@ -34,7 +33,7 @@
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
-      <scope>provided</scope>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -44,12 +43,12 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-tomcat</artifactId>
-      <!--<scope>provided</scope>-->
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.tomcat.embed</groupId>
       <artifactId>tomcat-embed-jasper</artifactId>
-      <!--<scope>provided</scope>-->
+      <scope>compile</scope>
     </dependency>
     <!-- Test -->
     <dependency>
@@ -65,6 +64,14 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
       </plugin>
     </plugins>
   </build>

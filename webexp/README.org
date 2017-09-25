@@ -2,8 +2,8 @@
 
 1. 配置maven
 
-2. 在工程根目录执行mvn install，在target下会生成webexp.jar
+2. 在工程根目录执行mvn install，在target下会生成webexp.war
 
-3. 执行java -jar -Dfile.encoding=utf-8 webexp.jar启动
+3. java -jar webexp.war启动
 
-4. 访问http://localhost:8080/webexp
+4. 访问http://host:port/webexp
